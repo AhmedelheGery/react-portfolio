@@ -1,14 +1,22 @@
-import Count from "../components/counter/Count"
-import CounterActions from "../components/counter/CounterActions"
+import { useState } from "react";
+import Count from "../components/counter/Count";
+import CounterActions from "../components/counter/CounterActions";
 
-const Counter = ({count,increment,decrement}) => {
-    return (
-        <>
-        <Count count={count} />
-        <CounterActions increment={increment} decrement={decrement} />
-        </>
-            
-    )
-}
+const Counter = () => {
+  const [count, setCount] = useState(0);
 
-export default Counter
+  const increment = () => {
+    setCount(count + 1);
+  };
+  const decrement = () => {
+    count > 0 && setCount(count - 1);
+  };
+  return (
+    <>
+      <Count count={count} />
+      <CounterActions increment={increment} decrement={decrement} />
+    </>
+  );
+};
+
+export default Counter;
