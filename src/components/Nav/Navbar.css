@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 2%;
+}
+
+.login{
+    background-color: blueviolet;
+    color: #fff;
+    margin: 0 2%;
+}
+
+.logout{
+    background-color: brown;
+    color: #fff;
+
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
