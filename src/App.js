@@ -1,38 +1,19 @@
-import HeaderWrapper from "./components/header/Header";
-import About from "./components/about/About";
-import "./App.css";
 import { useState } from "react";
-import Navbar from "./components/Nav/Navbar";
+import Counter from "./views/Counter";
 
 function App() {
-  const [headerTitle, setHeaderTitle] = useState("State Header Title"); // 1 method from hooks
-  const [aboutTitle, setAboutTitle] = useState("State About Title");
+  const [count, setCount] = useState(0);
 
-  const [userLogged, setUserLogged] = useState(false);
-
-  const login = () => {
-    setUserLogged(true);
+  const increment = () => {
+    setCount(count + 1);
   };
-  const logout = () => {
-    setUserLogged(false);
+  const decrement = () => {
+    count > 0 && setCount(count - 1);
   };
 
   return (
     <div>
-      <Navbar userLogged={userLogged} login={login} logout={logout} />
-
-      {userLogged === true ? (
-        <>
-          <h1>Welcom From App</h1>
-          <HeaderWrapper title={headerTitle} />
-          <About
-            aboutTitle={aboutTitle}
-            info="Lorem ipsum dolor sit amet consectetur."
-          />
-        </>
-      ) : (
-        <p>Please Logon to see content!!</p>
-      )}
+      <Counter count={count} increment={increment} decrement={decrement} />
     </div>
   );
 }
