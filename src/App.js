@@ -1,4 +1,5 @@
-import Counter from "./views/Counter";
+import Counter from "./views/counter/Counter";
+import TodoList from "./views/todo/Todo";
 import Shop from "./components/shop/Shop";
 import Home from "./components/home/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
           <Route component={Counter} path="/count" />
           <Route component={Shop} path="/shop" exact />
           <Route component={Product} path="/shop/:id" />
+          <Route component={TodoList} path="/todo" />
         </Switch>
         <Footer />
       </div>

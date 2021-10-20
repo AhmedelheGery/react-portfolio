@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Card } from "react-bootstrap";
-import Count from "../components/counter/Count";
-import CounterActions from "../components/counter/CounterActions";
+import Count from "../../components/counter/Count";
+import CounterActions from "../../components/counter/CounterActions";
 import './Counter.css'
 const Counter = () => {
   const [count, setCount] = useState(0);
