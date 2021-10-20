@@ -1,13 +1,14 @@
-.count{
-    text-align: center;
+.count {
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
-.btn-wrapper{
-    display: flex;
-    justify-content: center;
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
-.btn-wrapper button{
+.btn-wrapper button {
   margin: 0 1%;
   cursor: pointer;
 }
