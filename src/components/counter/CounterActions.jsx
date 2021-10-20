@@ -1,9 +1,15 @@
-const CounterActions = ({increment,decrement}) => {
+const CounterActions = ({ increment, decrement }) => {
   return (
-    <div className="btn-wrapper">
-      <button onClick={increment}>Increment +</button>
-      <button onClick={decrement}>decrement -</button>
-    </div>
+    <>
+      <div className="btn-wrapper w-100">
+        <button className="btn btn-dark" onClick={increment}>
+          Increment +
+        </button>
+        <button className="btn btn-light" onClick={decrement}>
+          decrement -
+        </button>
+      </div>
+    </>
   );
 };
 
